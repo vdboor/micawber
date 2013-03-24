@@ -126,8 +126,11 @@ def bootstrap_basic(cache=None):
 
     # d
     pr.register('https?://(www\.)?dailymotion\.com/\S+', Provider('http://www.dailymotion.com/services/oembed'))
+    pr.register('http://\S+.deviantart.com/art/\S+', Provider('http://backend.deviantart.com/oembed'))
+    pr.register('http://\S+.deviantart.com/\S+#/d\S+', Provider('http://backend.deviantart.com/oembed'))
 
     # f
+    pr.register('http://fav.me/\S+', Provider('http://backend.deviantart.com/oembed'))
     pr.register('http://\S*?flickr.com/\S+', Provider('http://www.flickr.com/services/oembed/'))
     pr.register('http://flic\.kr/\S*', Provider('http://www.flickr.com/services/oembed/'))
     pr.register('https?://(www\.)?funnyordie\.com/videos/\S+', Provider('http://www.funnyordie.com/oembed'))
