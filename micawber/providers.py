@@ -147,6 +147,8 @@ def bootstrap_basic(cache=None):
     pr.register('http://www.jest.com/(video|embed)/\S+', Provider('http://www.jest.com/oembed.json'))
 
     # m
+    pr.register('http://(www.)?meetup.com/\S*', Provider('http://api.meetup.com/oembed'))
+    pr.register('http://meetu.ps/\S*', Provider('http://api.meetup.com/oembed'))
     pr.register('http://www.mobypicture.com/user/\S*?/view/\S*', Provider('http://api.mobypicture.com/oEmbed'))
     pr.register('http://moby.to/\S*', Provider('http://api.mobypicture.com/oEmbed'))
 
